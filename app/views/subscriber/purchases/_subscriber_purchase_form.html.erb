@@ -1,0 +1,5 @@
+<%= semantic_form_for :subscriber_purchase, url: [:subscriber, @purchaseable, :purchases] do |form| %>
+  <%= form.actions do %>
+    <%= form.action :submit, label: 'Get Access' %>
+  <% end %>
+<% end %>

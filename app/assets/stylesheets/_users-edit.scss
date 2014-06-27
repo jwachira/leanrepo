@@ -1,0 +1,66 @@
+body.users-edit {
+  form {
+    margin: 0;
+  }
+
+  legend {
+    padding: 0;
+    margin-bottom: 1em;
+    font-size: 1em;
+  }
+
+  #account-sidebar {
+    text-align: center;
+
+    a {
+      font-size: $font-size-small;;
+    }
+
+    h3 {
+      border-top: 1px solid $base-border-color-1;
+      font-size: 1.4rem;
+      margin-top: 30px;
+      padding-top: 30px;
+
+      &:first-of-type {
+        border-top: 0;
+        margin-top: 0;
+        padding-top: 0;
+      }
+    }
+
+    ol {
+      list-style-type: none;
+      margin: 1em 0 0 0;
+
+      &.purchases li {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      li a {
+        font-style: normal;
+        text-decoration: underline;
+        padding: .25rem 0;
+      }
+
+      .subscription p {
+        padding: .5rem 0;
+      }
+
+      .subscription a {
+        display: block;
+      }
+    }
+
+    a.view-all-purchases {
+      display: block;
+      margin-top: 2em;
+      font-family: $sans-serif;
+    }
+  }
+
+  .card-cvc {
+    margin: 0;
+  }
+}

@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  min_messages: warning
+  pool: 2
+  timeout: 5000
+  host: localhost
+
+development:
+  <<: *default
+  database: workshops_development
+
+test:
+  <<: *default
+  pool: 4
+  database: workshops_test

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head prefix="og: http://ogp.me/ns#">
+    <%= render 'application/head_contents' %>
+  </head>
+
+  <body class="<%= body_class %> <%= yield(:additional_body_classes) %>">
+    <%= yield %>
+    <%= render 'shared/javascript' %>
+    <%= render 'chat' %>
+  </body>
+</html>
+

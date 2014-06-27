@@ -1,0 +1,22 @@
+<% if signed_in? %>
+  <%= link_to 'account', my_account_path, class: 'prime-signin' %>
+<% else %>
+  <%= link_to 'sign in', sign_in_path, class: 'prime-signin' %>
+<% end %>
+
+<section class="journey-headline">
+  <div class="logo">
+    <h1><%= image_tag('learn/learn-ralph.png') %></h1>
+    <h2>Get access to Learn</h2>
+  </div>
+</section>
+
+<section class="subscriptions">
+  <%= render 'pricing' %>
+  <%= render 'testimonials' %>
+  <%= render 'plan_features' %>
+  <%= render 'footer' %>
+</section>
+<div class="footer-wrapper">
+  <%= render 'promoted_catalogs/footer' %>
+</div>

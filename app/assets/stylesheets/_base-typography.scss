@@ -1,0 +1,138 @@
+h1, h2, h3, h4, h5, h6 {
+  color: $darkwarmgray;
+  display: block;
+  font-family: $sans-serif;
+  font-weight: 700;
+  line-height: 1.2em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h1 a {
+  color: white;
+  font-size: 72px;
+  font-weight: 800;
+}
+
+h2 {
+  font: 800 36px/40px $sans-serif;
+}
+
+h3 {
+  color: $gray-2;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+h4 {
+  color: #94918C;
+  font-size: 1em;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+p, li {
+  color: $darkwarmgray;
+  font: normal 1em/1.75em $serif;
+  margin-bottom: .8em;
+  -webkit-font-smoothing: antialiased;
+
+  em {
+    font-style: italic;
+  }
+}
+
+a {
+  color: $red;
+  font-family: $serif;
+  text-decoration: none;
+}
+
+strong {
+  font-weight: bold;
+}
+
+pre code {
+  background-color: $lightwarmgray;
+  background-color: darken($off-white, 7%);
+  border-radius: 3px;
+  display: block;
+  line-height: 1.4rem;
+  margin: 2rem 0;
+  overflow-x: scroll;
+  padding: 1rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+code {
+  color: $darkwarmgray;
+  font-family: monaco;
+  font-size: .9rem;
+}
+
+// negate brs inserted into posts
+.text-box br {
+  display: none;
+  float: left;
+}
+
+blockquote {
+  border-left: 4px solid $warmgray;
+  font-style: italic;
+  margin-left: 1rem;
+  padding-left: 1rem;
+}
+
+q {
+  display: block;
+  font-style: italic;
+  margin: 2rem 0 0 1em;
+  width: 80%;
+}
+
+p.source {
+  margin-bottom: 1rem !important; // override inline styles
+  margin-top: 0 !important; // override inline styles
+}
+
+ol, ul {
+  list-style-type: disc;
+  margin: 0 0 0 2em;
+  padding: 0;
+
+  li {
+    color: $darkwarmgray;
+    margin: 0 0 .8em 0;
+  }
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid white;
+  border-top: 1px solid $warmgray;
+  color: $warmgray;
+  height: 2px;
+}
+
+@include font-face(entypo, '/assets/entypo/entypo');
+.icon {
+  font-family: "entypo";
+  font-size: 25px;
+  font-weight: normal;
+  position: relative;
+  top: 3px;
+}
+
+@include body-mobile {
+  ol, ul {
+    margin: 0 0 0 .75em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.25em;
+  }
+
+  p, li {
+    line-height: 1.6em;
+  }
+}

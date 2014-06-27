@@ -1,0 +1,28 @@
+<% content_for :head do %>
+  <%= auto_discovery_link_tag(:rss, weekly_iteration_url(format: 'rss')) %>
+<% end %>
+
+<%= render 'offerings/meta', offering: @show %>
+
+<div class="text-box-wrapper">
+  <div class="text-box">
+    <p class="videowrapper">
+      <iframe src="//fast.wistia.net/embed/iframe/ol6e0miehm?controlsVisibleOnLoad=true&version=v1&videoHeight=415&videoWidth=738&volumeControl=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="653" height="367"></iframe>
+    </p>
+
+    <section id="videos">
+      <% @show.published_videos.ordered.each do |video| %>
+        <%= content_tag_for :div, video do %>
+          <%= link_to public_video_path(video) do %>
+            <%= render 'videos/thumbnail', clip: video.clip, title: video.title %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </section>
+  </div>
+</div>
+
+<aside>
+  <%= render 'subscribe', plan: @plan, show: @show %>
+  <%= render 'products/terms', product: @show %>
+</aside>

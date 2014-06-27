@@ -1,0 +1,15 @@
+!.keep
+*.DS_Store
+*.swp
+.env
+/coverage/
+/log/
+/public/system/
+/tmp/
+rerun.txt
+tags
+.tddium*
+.env
+.bundle
+.foreman
+dump.rdb

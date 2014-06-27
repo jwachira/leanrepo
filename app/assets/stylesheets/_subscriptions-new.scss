@@ -1,0 +1,587 @@
+// Variables
+$plan-width: 190px;
+$plan-width-callout: $plan-width + 10px;
+$plan-padding: 35px;
+$plan-header-height: 120px;
+$plan-max-width: 960px;
+$celestial-blue: #4A90E2;
+$yellow: #F3E86B;
+
+body.subscriptions-new nav .prime,
+body.subscriptions-new nav .view-plans {
+  display: none;
+}
+
+body.subscriptions-new .journey-headline {
+  background: $lightwarmgray;
+  padding-bottom: 0;
+
+  h2 {
+    margin: 0.5em 0;
+  }
+}
+
+body.subscriptions.subscriptions-new {
+
+  .footer-wrapper {
+    background: $lightwarmgray;
+  }
+
+  footer.links {
+    margin: 0 auto;
+    max-width: $plan-max-width;
+    padding: 5rem 4vw;
+    width: 100%;
+
+    a {
+      margin: 0 .25rem;
+    }
+  }
+}
+
+.plans {
+  background: $base-background-1;
+  padding: 0 $plan-padding;
+
+  .inner {
+    @include clearfix;
+    margin: 0 auto;
+    padding: 80px 0 100px;
+    position: relative;
+    width: $plan-width * 4 + $plan-width-callout;
+  }
+
+  nav, .plan, header p {
+    float: left;
+    width: $plan-width;
+
+    ol {
+      list-style: none;
+      margin: 0;
+    }
+
+    li {
+      height: 26px;
+    }
+  }
+
+  header {
+    @include clearfix;
+    display: block;
+    width: 100%;
+    @include display(flex);
+    @include align-items(center);
+
+    p {
+      color: #4A4A4A;
+      display: block;
+      font-family: $sans-serif;
+      line-height: 1.4;
+      padding: $plan-padding/2;
+      padding-top: 0;
+      text-align: center;
+
+      &.popular {
+        font-weight: bold;
+        width: $plan-width-callout;
+      }
+    }
+  }
+
+  nav {
+    padding-right: $plan-padding;
+    text-align: right;
+
+    ol {
+      margin-top: $plan-header-height;
+    }
+
+    a {
+      $color: #276FC3;
+      border-bottom: 1px solid rgba($color, 0.15);
+      color: $color;
+      display: inline-block;
+      line-height: 1;
+      @include transform(translateY(-4px));
+      font-family: $sans-serif;
+      font-weight: 600;
+
+      &:hover {
+        border-bottom-color: rgba($color, 0.75);
+      }
+    }
+  }
+
+  section.plan {
+    background: $base-background-1;
+    border: 1px solid $warmgray;
+    border-left-width: 0;
+    border-right-width: 0;
+    text-align: center;
+
+    &:nth-of-type(1) {
+      box-shadow: -1px 0 0 $warmgray;
+    }
+
+    &:nth-of-type(4) {
+      box-shadow: 1px 0 0 $warmgray, -1px 0 0 $warmgray;
+    }
+
+    h3 {
+      color: darken($darkwarmgray, 10%);
+      font-size: 1.2rem;
+      font-weight: 600;
+      height: $plan-header-height;
+      padding: $plan-padding;
+    }
+
+    li {
+      box-shadow: 0 1px 0 hsla(0, 0%, 0%, 0.05);
+      padding: 0 $plan-padding;
+
+      &:last-of-type {
+        box-shadow: none;
+      }
+
+      img {
+        @include transform(translateY(-2px));
+      }
+
+      &.check-lg img {
+        @include transform(translateY(-4px));
+      }
+    }
+
+    .price {
+      color: $darkwarmgray;
+      font-size: 1.05rem;
+      margin: 2rem 0;
+    }
+
+    .sign-up,
+    .current-plan {
+      border: 1px solid $warmgray;
+      border-radius: 2px;
+      color: $darkwarmgray;
+      display: block;
+      font-family: $sans-serif;
+      margin: 2rem $plan-padding;
+      padding: 0.5rem 0;
+    }
+
+    .current-plan {
+      background: rgba(#ccc, 0.16);
+      border: 0;
+      font-size: 0.9rem;
+      font-weight: bold;
+      line-height: 1;
+      margin-top: -6px;
+      padding: 0.5rem 0.2rem;
+    }
+  }
+
+  .plan.popular {
+    background: #EDF5FF;
+    border-color: #9CBEE5;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    box-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.14);
+    margin-top: -12px;
+    padding: 12px 0 15px;
+    width: $plan-width-callout;
+
+    h3 {
+      color: #3C85DB;
+      font-size: 1.3rem;
+      font-weight: 800;
+    }
+
+    $blue: #4A90E2;
+    .sign-up {
+      background: $blue;
+      border: 0;
+      color: #fff;
+      font-weight: 700;
+      @include transform(translateY(-0.2rem));
+      padding: 0.8rem 0;
+      margin: 2rem $plan-padding*0.9;
+    }
+
+    .current-plan {
+      background: rgba($blue, 0.16);
+      color: darken($blue, 15%);
+    }
+  }
+
+  .teams-pricing {
+    margin-top: 98px;
+
+    a {
+      // border-bottom: 0;
+      border-bottom-color: hsla(0, 0%, 65%, 0.15);
+      color: hsla(0, 0%, 65%, 1);
+      font-size: 0.75rem;
+      line-height: 1.5;
+      text-transform: uppercase;
+      white-space: nowrap;
+
+      &:hover {
+        border-bottom-color: hsla(0, 0%, 65%, 0.75);
+      }
+    }
+  }
+}
+
+// Footer
+////////////////////////////////////////////////////////////////////////////
+
+.plans.footer {
+  background: $lightwarmgray;
+
+  .inner {
+    width: ($plan-width + 20)*3 + $plan-width-callout + 20;
+  }
+
+  .logo {
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+
+  section.plan {
+    width: $plan-width + 20;
+
+    &.popular {
+      width: $plan-width-callout + 20;
+    }
+
+    h3 {
+      height: auto;
+      padding-bottom: 1em;
+    }
+
+    p {
+      @include align-items(center);
+      @include display(flex);
+      font-size: $font-size-small;
+      line-height: 1.5;
+      margin-bottom: 2em;
+      min-height: 72px;
+      padding: 0 $plan-padding/2;
+    }
+
+    .price {
+      margin-top: 0;
+    }
+  }
+}
+
+// Testimonials
+////////////////////////////////////////////////////////////////////////////
+
+.testimonials {
+  background-color: $celestial-blue;
+  padding: $plan-padding;
+
+  figure {
+    img {
+      @include size(160px);
+      border-radius: 50%;
+      margin-bottom: em(14);
+    }
+  }
+
+  h2 {
+    $testimonials-padding: 75px 0;
+    color: white;
+    padding: $testimonials-padding;
+    text-align: center;
+  }
+
+  .inner {
+    @include clearfix;
+    margin: 0 auto;
+    padding-bottom: 72px;
+    width: $plan-max-width;
+
+    figure > p {
+      color: white;
+      line-height: 1.3;
+      font-family: $sans-serif;
+      font-weight: 800;
+    }
+  }
+
+  .feature-quote {
+    @include outer-container;
+    margin-bottom: 72px;
+
+    figure {
+      @include span-columns(3);
+      text-align: center;
+      font-size: 120%;
+    }
+
+    blockquote {
+      @include span-columns(9);
+      @include omega();
+
+      position: relative;
+      border: 1px solid #1C6CC9;
+      background-color: white;
+      border-radius: em(12);
+      padding: 45px;
+      margin: 0;
+      z-index: 0;
+
+      &:before {
+        @include triangle(42px, white, left);
+
+        content: "";
+        position: absolute;
+        left: -21px;
+        top: 15%;
+        z-index: 2;
+      }
+
+      &:after {
+        @include triangle(42px, #1C6CC9, left);
+
+        content: "";
+        position: absolute;
+        left: -22px;
+        top: 15%;
+        z-index: 1;
+      }
+
+      p {
+        color: $celestial-blue;
+        font-size: 1.15rem;
+        font-style: italic;
+        position: relative;
+        padding-left: em(30);
+
+        &:before {
+          @include size(11px);
+          padding: 11px 16px 11px 6px;
+          color: white;
+          content: "“";
+          border-radius: 50%;
+          background-color: $learnred;
+          font-family: $sans-serif;
+          font-size: em(32);
+          position: absolute;
+          left: -3%;
+        }
+      }
+    }
+  }
+
+  .quotee {
+    strong {
+      color: #0053b3;
+      font-size: em(13);
+      font-weight: 700;
+      letter-spacing: em(1);
+      text-transform: uppercase;
+    }
+  }
+
+  .supporting-quotes {
+    @include outer-container;
+
+    img {
+      @include size(70px);
+
+      float: left;
+      display: inline-block;
+      margin-right: 24px;
+      margin-bottom: 30px;
+    }
+
+    .supporting-quote {
+      @include span-columns(4);
+      margin-bottom: 50px;
+
+      figure {
+        background-color: $celestial-blue;
+        margin-bottom: em(36);
+
+        p {
+          padding: em(16) 0;
+        }
+      }
+
+      blockquote {
+        background-color: #2879D6;
+        border: 1px solid #1C6CC9;
+        border-radius: em(12);
+        padding: 30px;
+        margin: 0;
+        position: relative;
+        z-index: 0;
+
+        strong {
+          color: $yellow;
+          display: inline;
+        }
+
+        &:before {
+          @include triangle(26px, #2879D6, up);
+
+          content: "";
+          position: absolute;
+          left: 20px;
+          top: -13px;
+          z-index: 2;
+        }
+
+        &:after {
+          @include triangle(26px, #1C6CC9, up);
+
+          content: "";
+          position: absolute;
+          left: 20px;
+          top: -14px;
+          z-index: 1;
+        }
+
+        p {
+          color: white;
+          font-size: $font-size-small;
+          font-style: italic;
+          line-height: 1.55;
+        }
+      }
+    }
+  }
+
+  strong {
+    color: darken($celestial-blue, 20%);
+    display: block;
+  }
+}
+
+// Plan Features
+////////////////////////////////////////////////////////////////////////////
+
+.plan-features {
+  padding: 80px 0;
+  background: $base-background-1;
+
+  .inner {
+    @include clearfix;
+    max-width: $plan-max-width;
+    margin: 0 auto;
+  }
+
+  article {
+    margin-bottom: 25px;
+    padding-left: 36px;
+    padding-right: 18px;
+    padding-top: 25px;
+    @include span-columns(6 of 12);
+
+    &:target {
+      h3 {
+        border-bottom: 2px solid currentColor;
+      }
+    }
+
+    &:nth-of-type(2n) {
+      @include omega();
+      padding-left: (36px/2);
+      padding-right: 36px;
+    }
+  }
+
+  header {
+    position: relative;
+  }
+
+  h3 {
+    border-bottom: 2px solid transparent;
+    color: $learnred;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.7em;
+    @include transition(border-color 0.5s $ease-in-quad);
+  }
+
+  h4 {
+    color: darken($darkwarmgray, 8%);
+    font-size: 1.2rem;
+    line-height: 1.3;
+    margin-bottom: 0.6em;
+  }
+
+  p, ul {
+    font-size: $font-size-small;
+    line-height: 1.6;
+    margin-bottom: 0.85em;
+  }
+
+  .included-in {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    opacity: 0.65;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    > div {
+      display: inline-block;
+      position: relative;
+
+      &:before, &:after {
+        content: "";
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+      }
+
+      &:before {
+        background: #333;
+        border-radius: 2px;
+        color: hsla(0, 0%, 100%, 0.9);
+        font-size: 0.8rem;
+        line-height: 1;
+        padding: 5px 8px 3px;
+        top: -35px;
+        @include transform(translateX(-45%));
+        white-space: nowrap;
+      }
+
+      &:after {
+        top: -15px;
+        @include triangle(12px, #333, down);
+      }
+
+      &:hover {
+        &:before, &:after {
+          @include transition(opacity 0.04s $ease-out-quad);
+          opacity: 1;
+        }
+      }
+
+      $count: 1;
+      $plans: "1-on-1 Coaching", "Aspiring Professional", "Part-time Learner", "30 Minutes a Week";
+      @each $plan in $plans {
+        &:nth-of-type(#{$count}):before {
+          content: "#{$plan}";
+          $count: $count + 1;
+        }
+      }
+    }
+
+    img {
+      height: 14px;
+    }
+
+    .false img {
+      height: 12px;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<%= content_tag :figure, class: workshop_card_classes(workshop) do %>
+  <%= link_to workshop, title: workshop.name, 'data-role' => 'workshop' do %>
+    <h4><%= workshop.name %></h4>
+    <span class="hover-text">View Details &rarr;</span>
+    <%= image_tag(workshop.thumbnail_path) %>
+    <h5>Online Workshop</h5>
+    <h5 class="status"><%= workshop_card_status(workshop) %></h5>
+    <p><%= workshop.short_description %></p>
+  <% end %>
+<% end %>

@@ -1,0 +1,28 @@
+<% if !current_user_has_active_subscription? %>
+  <section class="prime">
+    <%= link_to "Subscribe to #{t('shared.subscription.name')} to access all of these products", prime_path, class: 'button' %>
+  </section>
+<% end %>
+
+<h2>Every workshop</h2>
+<section id="workshops" class="workshops">
+  <%= render partial: 'products/workshop', collection: @catalog.workshops %>
+</section>
+
+<h2>Every show</h2>
+<section id="shows" class="shows">
+  <%= render @catalog.shows %>
+</section>
+
+<h2>Every screencast</h2>
+<section id="screencasts" class="screencasts">
+  <%= render @catalog.screencasts %>
+</section>
+
+<h2>Every exercise</h2>
+<%= render 'products/exercises' %>
+
+<h2>Every book</h2>
+<section id="books" class="reading">
+  <%= render @catalog.books %>
+</section>

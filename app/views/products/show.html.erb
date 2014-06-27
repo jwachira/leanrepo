@@ -1,0 +1,14 @@
+<%= render 'offerings/details', offering: @offering %>
+
+<aside>
+  <%= render(
+    'products/license',
+    product: @offering,
+    licenses: @offering.licenses_for(current_user)
+  ) %>
+  <%= render 'products/terms', product: @offering %>
+</aside>
+
+<% content_for :outside do %>
+  <div id="flash"></div>
+<% end %>

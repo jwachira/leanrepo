@@ -1,0 +1,35 @@
+%main-content-box {
+  background-color: $base-background-2;
+  border: 1px solid $base-border-color-1;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 1px white, $base-box-shadow;
+  margin-bottom: 1em;
+  overflow-y: scroll;
+  padding: 24px;
+  position: relative;
+}
+
+%trail-bullet {
+  background: transparent;
+  border: 2px solid darken($journey-line-color, 12%);
+  border-radius: 100%;
+  @include box-sizing(border-box);
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+%trail-bullet-complete {
+  background: url(<%= asset_path 'check.svg' %>) darken($journey-line-color, 12%) center center no-repeat;
+  background-size: .9rem;
+  border-color: transparent;
+  color: #fff;
+  text-align: center;
+}
+
+%goal-bullet-add {
+  background: url(<%= asset_path 'plus.svg' %>) $learnred center center no-repeat;
+  background-size: .9rem;
+  border-color: transparent;
+  color: #fff;
+  text-align: center;
+}

@@ -1,0 +1,41 @@
+@mixin prime-marketing-mobile {
+  @media screen and (max-device-width: 620px), screen and (max-width: 620px) {
+    @content;
+  }
+}
+
+@mixin prime-marketing-tablet {
+  @media screen and (max-device-width: 1088px), screen and (max-width: 1088px) {
+    @content;
+  }
+}
+
+@mixin prime-marketing-fullsize {
+  @media only screen and (min-width: 800px) {
+    @content;
+  }
+}
+
+@mixin body-mobile {
+  @media screen and (max-device-width: 620px), screen and (max-width: 620px) {
+    @content;
+  }
+}
+
+@mixin dashboard-large {
+  @media screen and (max-width: 1560px) {
+    @content;
+  }
+}
+
+@mixin dashboard-medium {
+  @media screen and (max-width: 1050px) {
+    @content;
+  }
+}
+
+@mixin dashboard-small {
+  @media screen and (max-width: 860px) {
+    @content;
+  }
+}

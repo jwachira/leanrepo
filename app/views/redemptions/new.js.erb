@@ -1,0 +1,11 @@
+<% if @coupon %>
+  updatePurchaseSubmitAmount('<%= number_to_currency @buying.price, precision: 2 %> (<%= coupon_amount(@coupon) %> off)');
+  $(".coupon .error").hide();
+  $(".coupon").hide();
+  $("#coupon_id").val(<%= @coupon.id %>);
+  <% if @buying.free? %>
+    $("fieldset#billing-information").remove();
+  <% end %>
+<% else %>
+  $(".coupon .error").show();
+<% end %>

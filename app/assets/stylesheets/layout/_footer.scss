@@ -1,0 +1,128 @@
+footer.links {
+  @extend .clearfix;
+  clear: both;
+  font-size: $font-size-small;
+  margin: 0 auto;
+  max-width: 45rem;
+  opacity: .5;
+  padding: 2em;
+  @include transition(opacity .5s);
+  width: 93%;
+
+  @media print {
+    display: none;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  h3 {
+    color: #545454;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1em;
+    margin-bottom: 1em;
+  }
+
+  a {
+    color: #7a7a7a;
+    text-decoration: none;
+
+    &:link {
+      color: #7a7a7a;
+    }
+
+    &:hover {
+      color: $red;
+    }
+  }
+
+  nav {
+    @extend .clearfix;
+
+    section {
+      float: left;
+      margin-right: flex-gutter();
+      width: flex-grid(4);
+
+      &#thoughtbot {
+        padding-right: 1em;
+        width: flex-grid(3);
+      }
+
+      &#trails {
+        float: right;
+        margin-right: 0;
+        width: flex-grid(8);
+
+        ul li {
+          width: 33%;
+          float: left;
+        }
+      }
+
+      ul {
+        list-style: none;
+        margin: 0 0 1em 0;
+        overflow: auto;
+
+        li {
+          display: block;
+          margin-bottom: .5em;
+        }
+      }
+    }
+  }
+
+  #copyright {
+    color: #7a7a7a;
+    display: block;
+    font: italic $font-size-small $serif;
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-top: 3rem;
+    text-rendering: optimizeSpeed;
+  }
+}
+
+a.chat, a.chat:link, a.chat:visited {
+  background: #AD141E none repeat scroll 0 0;
+  border-radius: 5px 5px 0 0;
+  bottom: 0px;
+  color: white;
+  display: block;
+  margin: 0px 20px;
+  opacity: 1;
+  padding: .5em 1em;
+  position: fixed;
+  right: 0px;
+  text-decoration: none;
+  z-index: 99999999;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@include body-mobile {
+  footer {
+    width: 100%;
+
+    nav section {
+      float: none;
+      margin-bottom: 2em;
+      width: 100% !important;
+
+      &#trails {
+        width: 100%;
+        margin-right: 0;
+
+        ul li {
+          width: 50%;
+          float: left;
+        }
+      }
+    }
+  }
+}

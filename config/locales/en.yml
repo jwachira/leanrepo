@@ -1,0 +1,213 @@
+en:
+  admin:
+    actions:
+      purchase_refund:
+        menu:
+          Refund Purchase
+      purchase_accounting:
+        menu: Accounting
+        title: Accounting
+        breadcrumb: Accounting
+      section_students:
+        menu: Students
+        title: Students
+        breadcrumb: Students
+      timeline:
+        menu: Timeline
+        title: Timeline
+        breadcrumb: Timeline
+      mentees:
+        menu: Mentees
+        title: Mentees
+        breadcrumb: Mentees
+    misc:
+      filter_date_format: '%D'
+
+  layouts:
+    meta_description: 'Workshops, screencasts, videos, and books to help you learn web design and development.'
+    app_name: 'thoughtbot Learn'
+
+  dashboards:
+    locked_features:
+      locked_features:
+        title_html: "%{features} are locked &mdash; %{link} to get access"
+        upgrade_link: "upgrade your subscription"
+        subscribe_link: "subscribe to Prime"
+    show:
+      contact_your_mentor: "Contact your mentor, %{mentor_name}"
+
+  account:
+    view_purchases: 'View all purchases →'
+
+  individual_plans:
+    mentoring: '1-1 Mentoring'
+    workshops: 'Hands-On Workshops'
+    forum: 'Private Discourse Forum'
+
+  notes:
+    flashes:
+      error: 'Please fill in the note'
+      success: 'Your note was saved successfully'
+
+  offerings:
+    alternate:
+      in_person_workshop_cities_html: "In %{cities}?"
+      online_workshop_cities_html: "Not in %{cities}?"
+      in_person_workshop_html: "<b>Take the In-Person Workshop.</b>"
+      online_workshop_html: "<b>Take the Online Workshop.</b>"
+    subtitle:
+      book: ''
+      in_person_workshop: 'in-person'
+      online_workshop: 'online'
+      subscription: ''
+      video: ''
+
+  products:
+    show:
+      free_to_subscribers: "You're a subscriber, so you receive this product free!"
+      subscribe_cta: "This %{offering_type} is free with a subscription to %{subscription_name}"
+      purchase_for_subscribed_user: Get this %{offering_type}
+      purchase_collection_for_subscribed_user: Get this %{offering_type} collection
+      price:
+        individual_html: "For yourself: %{price}"
+        company_html: "For your company: %{price}"
+        subscription:
+          individual_html: "%{price}"
+      upgrade: "Upgrade your plan to access this %{offering_type}"
+    license:
+      or_buy_individually: "Or buy individually"
+
+  workshops:
+    overlapping: You're already taking another workshop
+    show:
+      register: Register for this Workshop
+      register_free_inperson: Register for this Workshop
+      register_free: Begin this Workshop
+      upgrade: Upgrade your plan to access this workshop
+      free_to_subscribers: "You're a subscriber, so you can take this workshop free!"
+
+  purchases:
+    new:
+      subscribe_cta: "You could have this %{product_type} as part of a subscription to %{subscription_name} instead"
+    payment_methods:
+      stripe: Stripe
+      paypal: PayPal
+      subscription: Subscription
+      free: Free
+
+  teachers:
+    teacher:
+      header: Taught by
+
+  shared:
+    intro:
+      Guided learning on modern design & development best practices, by topic. Dig in.
+    prime_intro:
+      Professional grade workshops, screencasts & ebooks
+    books:
+      Books
+    in_person_workshops:
+      In-person Workshops
+    learn:
+      Learn
+    workshops:
+      online: online
+      in_person: in-person
+    subscription_call_to_action:
+      Get access to everything
+    company_subscription_call_to_action:
+      Get access for your entire team
+    videos:
+      Screencasts
+    trails:
+      Trail Maps
+    subscription:
+      name: Prime
+    subscriptions:
+      icon: ✶
+      user_required: ✶ Sign in or sign up to subscribe to Prime.
+
+  topics:
+    workshop:
+      heading:
+        online:
+          Online workshop
+        in_person:
+          In-person workshop
+    index:
+      heading:
+        In-person workshop
+      view_products:
+        View all thoughtbot products
+    promoted_product:
+      book:
+        action:
+          Read
+      video:
+        action:
+          Watch
+      workshop:
+        action:
+          Register
+    promoted_workshop:
+      action:
+        Register
+    trail_map:
+      resources:
+        Resources
+      validations:
+        You should be able to
+    product:
+      headings:
+        book:
+          Book
+        video:
+          Video
+    related:
+      products:
+        Related products
+      topics:
+        Related topics
+
+  purchase:
+    flashes:
+      success: Thank you for purchasing %{name}. We will email you your receipt shortly.
+    product:
+      heading_html: Complete your purchase of <em>%{name}</em>
+    comments: Dietary restrictions or special requests?
+
+  subscriber_purchase:
+    flashes:
+      success: Success! Enjoy your shiny new product.
+      error:  "You're already subscribed to Prime!"
+
+  subscriptions:
+    join_cta: See Plans & Pricing for Prime
+    cancel: Cancel
+    confirm_cancel_reject_deal: No thanks, just cancel my subscription
+    confirm_cancel: Yes, cancel my subscription
+    change_plan: Change plan
+    choose_plan_html: Start learning
+    current_plan_html: <p class="current-plan">This is your current plan</p>
+    take_refund: Get a refund
+    processing_refund: Processing...
+    reject_refund: No thanks, I'm happy
+    cancellation_scheduled_on: Scheduled for cancellation on %{date}
+    discount:
+      forever: $%{final_price}
+      once: $%{final_price} the first month, then $%{full_price}
+      repeating: $%{final_price} for %{duration_in_months} months, then $%{full_price}
+    flashes:
+      update:
+        success: You have successfully updated your subscription credit card information.
+      change:
+        success: You have successfully changed your subscription plan, any remaining balance has been applied to future invoices.
+      downgrade:
+        success: Your subscription has been downgraded.
+      cancel:
+        success: We're sorry to see you go. You will have access to all the benefits of Prime until the end of your current billing cycle.
+      refund:
+        success: We've canceled your subscription immediately and refunded the last subscription charge.
+
+  weekly_iteration_subscribe_cta:
+    Subscribe to Watch the Weekly Iteration

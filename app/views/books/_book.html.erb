@@ -1,0 +1,5 @@
+<figure class="book product-card">
+  <%= link_to book, title: book.name do %>
+    <%= image_tag cover_image(book), alt: "#{book.name} cover" %>
+  <% end %>
+</figure>

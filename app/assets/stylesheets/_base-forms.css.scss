@@ -1,0 +1,272 @@
+input[type="submit"] {
+  border-bottom-width: none;
+  border-image: initial;
+  border-left-color: none;
+  border-left-style: none;
+  border-left-width: none;
+  border-right-color: none;
+  border-right-style: none;
+  border-right-width: none;
+  border-top-color: none;
+  border-top-style: none;
+  border-top-width: none;
+  cursor: pointer;
+  padding: 13px 30px 0 30px;
+}
+
+.button, input[type="submit"] {
+  background-color: $learnred;
+  border-bottom: 3px solid $learndarkred;
+  border-radius: 3px;
+  color: white;
+  display: inline-block;
+  font: 600 14px/1.4em $sans-serif;
+  height: 44px;
+  margin: 0 auto;
+  padding: .75em 1em;
+  text-align:center;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: #C42107;
+  }
+
+  &:active {
+    background-color: $learndarkred;
+  }
+
+  &[disabled] {
+    background-color: $lightwarmgray;
+    border-bottom: 4px solid $warmgray;
+    color: $warmgray;
+    cursor: wait;
+  }
+
+  a {
+    color: white;
+    display: block;
+    height:100%;
+    padding-top: 15px;
+    width: 100%;
+  }
+
+  span {
+    font-weight: 100;
+  }
+}
+
+.button-mini {
+  @extend .button;
+  border-bottom: 2px solid $learndarkred;
+  height: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-bottom: 4px;
+  padding-top: 6px;
+}
+
+form {
+  margin: 0 0 2em 0;
+
+  ul, ol {
+    margin: 0;
+    padding: 0;
+  }
+
+  .errors, .errors li {
+    color: $learnred;
+    font-size: 18px;
+    font-style: bold;
+    margin-top: 20px;
+  }
+
+  li {
+    list-style-type: none;
+
+    &.payment-errors, &.subscription-errors {
+      color: $learnred;
+      font-style: bold;
+
+      &:empty {
+        display: none;
+      }
+    }
+  }
+
+  fieldset {
+    legend {
+      color: $darkwarmgray;
+      font: 700 26px/25px $sans-serif;
+      padding: 24px 0 12px 0;
+    }
+
+    label {
+      color: $darkwarmgray;
+      display: block;
+      font: normal 17px $serif;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="tel"],
+    textarea,
+    input[type="email"],
+    input[type="select"] {
+      background-color: #FFF;
+      border: 1px solid darken($warmgray, 5%);
+      border-radius: 4px;
+      box-shadow: none;
+      font-family: $sans-serif;
+      @include box-sizing(border-box);
+      font-size: 1rem;
+      margin: .25em 0;
+      padding: .75rem 1em;
+      width: 100%;
+
+      &:focus {
+        border: 1px solid $learnred;
+        outline: none;
+        outline-color: none;
+      }
+    }
+
+    ol {
+      &.actions {
+        margin-top: 2em;
+      }
+
+      li {
+        margin: 0 0 0 0;
+
+        p.inline-hints {
+          font-style: italic;
+        }
+
+        p.inline-errors {
+          color: $red;
+          font-size: 16px;
+        }
+
+        &.error {
+          p.inline-errors {
+            color: $red;
+          }
+
+          p.inline-hints {
+            color: $red;
+          }
+
+          input[type=text],
+          input[type=email],
+          input[type=password],
+          input[type=tel],
+          textarea {
+            background: #f8bcba;
+          }
+        }
+
+        &.commit {
+          margin-top: 24px;
+        }
+      }
+    }
+  }
+}
+
+#billing-information {
+  ol {
+    width: 100%;
+
+    li {
+      &.overflow {
+        @extend .clearfix;
+      }
+
+      &#purchase_expiration_input {
+        float: left;
+        margin-right: flex-gutter();
+        width: flex-grid(8);
+
+        select {
+          border: 1px solid darken($warmgray, 5%);
+          box-shadow: none;
+          @include box-sizing(border-box);
+          float: left;
+          font: 1rem $sans-serif;
+          height: 45px;
+          padding: 0 1rem;
+          -webkit-appearance: none;
+          width: flex-grid(6);
+
+          &.card-expiry-month {
+            margin-right: flex-gutter();
+          }
+
+          &:focus {
+            border: 1px solid $learnred;
+            outline: none;
+            outline-color: none;
+          }
+        }
+      }
+
+      &#purchase_cvc_input {
+        float: left;
+        width: flex-grid(4);
+      }
+
+      &#purchase_country_input {
+        clear: left;
+      }
+
+      &#purchase_cc_existing {
+        input, label {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+#notify-me {
+  h3 {
+    color: $darkwarmgray;
+  }
+
+  form {
+    margin-top: 1rem;
+  }
+
+  input[type="text"] {
+    border: 3px solid lighten($darkwarmgray, 30%);
+    border-radius: 3px;
+    border-width: 1px 1px 2px 1px;
+    @include box-sizing(border-box);
+    font-size: 14px;
+    height: 44px;
+    margin: 0 0 1rem;
+    padding: .8rem 1rem;
+    vertical-align: top;
+    width: 50%;
+  }
+
+  input[type="submit"] {
+    border-width: 0 0 2px 0;
+    margin-left: .5rem;
+    padding: .8rem 2rem;
+    text-transform: uppercase;
+  }
+}
+
+body.purchases-new {
+  #notify-me {
+    form {
+      margin-top: 0;
+      padding-top: 0;
+
+      input[type="text"] {
+        border: 1px solid $warmgray;
+      }
+    }
+  }
+}

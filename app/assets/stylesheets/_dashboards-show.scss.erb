@@ -1,0 +1,58 @@
+body.dashboards-show {
+  p {
+    font-size: $font-size-small;
+    line-height: 1.6;
+  }
+
+  #header-wrapper .header-container {
+    margin-bottom: $product-card-margin / 2;
+
+    .back {
+      display: none;
+    }
+  }
+
+  .content > section {
+    @include display(flex);
+    @include flex-flow(wrap);
+    @include justify-content(space-around);
+    margin-bottom: 3.5rem;
+  }
+
+  .product-card {
+    margin-bottom: 1.75rem;
+    vertical-align: top;
+  }
+
+  .product-headline {
+    margin-left: 20px;
+    margin-bottom: 30px;
+    color: #6C6A66;
+    font: 600 24px/30px $sans-serif;
+
+    &.center {
+      text-align: center;
+    }
+  }
+
+  .workshops.disabled {
+    background: url(<%= asset_path 'stripe.png' %>) repeat rgba(0, 0, 0, .05);
+    border-radius: .5rem;
+
+    .disabled-text {
+      margin: 1.5rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 2rem;
+    }
+
+    a {
+      color: $learndarkred;
+      font-family: $sans-serif;
+      line-height: 1.8rem;
+    }
+  }
+}

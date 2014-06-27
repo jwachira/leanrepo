@@ -1,0 +1,3 @@
+<% if purchaseable.published_videos.any? %>
+  <%= render purchaseable.published_videos.ordered, purchase: purchase %>
+<% end %>

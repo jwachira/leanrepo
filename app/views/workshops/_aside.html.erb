@@ -1,0 +1,21 @@
+<aside>
+  <%= render 'purchases/downloads_info', purchaseable: purchaseable %>
+
+  <% if purchaseable.resources.present? %>
+    <div class="resources">
+      <h3>Resources</h3>
+      <hr>
+      <%== format_resources(purchaseable.resources) %>
+    </div>
+  <% end %>
+
+  <%= render 'shared/sidebar_forum', purchaseable: purchaseable %>
+
+  <div class="office-hours">
+    <h3>Office Hours Schedule</h3>
+    <hr>
+    <p>Each Friday at <%= OfficeHours.time %> you can join thoughtbot and other
+    students in this chat.</p>
+    <%= link_to "Join Chat", OfficeHours.url, class: 'button' %>
+  </div>
+</aside>

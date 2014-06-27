@@ -1,0 +1,31 @@
+body.products-index {
+  .header-container {
+    margin-bottom: $product-card-margin / 2;
+  }
+
+  .content > section {
+    @include display(flex);
+    @include flex-flow(wrap);
+    @include justify-content(space-around);
+    margin-bottom: 3.5rem;
+  }
+
+  .content > h2 {
+    margin: 0 0 1.75rem;
+    text-align: center;
+  }
+
+  .product-card {
+    margin-bottom: 1.75rem;
+    vertical-align: top;
+  }
+
+  .prime .button {
+    display: block;
+    font-size: 1.2rem;
+    height: auto;
+    letter-spacing: 1px;
+    margin: $product-card-margin auto 2rem;
+    width: 400px;
+  }
+}

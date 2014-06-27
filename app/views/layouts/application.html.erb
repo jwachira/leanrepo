@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head prefix="og: http://ogp.me/ns#">
+    <%= render 'application/head_contents' %>
+  </head>
+
+  <body class="<%= body_class %> <%= yield(:additional_body_classes) %>">
+    <%= render 'shared/header' %>
+
+    <%= render 'shared/flashes' %>
+
+    <section class="content <%= yield(:additional_content_classes) %>">
+      <% if content_for?(:subject) %>
+        <h1 class="subject"><%= yield(:subject) %></h1>
+      <% end %>
+      <% if content_for?(:subject_block) %>
+        <div class="subject"><%= yield(:subject_block) %></div>
+      <% end %>
+      <%= yield %>
+    </section>
+
+    <%= yield(:outside) %>
+
+    <%= render 'shared/footer' %>
+
+    <%= render 'shared/javascript' %>
+  </body>
+</html>

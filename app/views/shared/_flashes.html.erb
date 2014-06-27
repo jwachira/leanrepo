@@ -1,0 +1,17 @@
+<% if flash.any? %>
+  <div class="flashes">
+    <% (flash.keys & [:success, :info, :notice, :error]).each do |key| -%>
+      <div class="flash <%= key %>">
+        <%= flash[key] %>
+      </div>
+    <% end -%>
+
+  <% if flash[:purchase_amount] %>
+     <% content_for :javascript do %>
+       <%= render 'conversions/purchased',
+             purchase_amount: flash[:purchase_amount],
+             purchase_name: flash[:purchase_name] %>
+     <% end %>
+   <% end %>
+  </div>
+<% end %>
